@@ -1,0 +1,76 @@
+<div class="box-container">
+  <div class="body-part">
+    <div class="FirstElement" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="items"
+      (cdkDropListDropped)="drop($event)">
+      <ng-container *ngFor="let item of items">
+        <div class="home-item">
+          <!-- Profile Text -->
+
+          <div *ngIf="item === 'profile-text'" class="profile-text glass-card" cdkDrag>
+
+            <h1 class="cursor typewriter-animation">
+              <span class="intro-text">Hi, It's Me</span>
+              <span class="highlight"> Neelesh</span> Gupta
+            </h1>
+            <h4>
+              I Am Into
+              <span class="highlight2">Web Development</span>
+            </h4>
+            <p>
+              Welcome to my portfolio! I'm an aspiring software engineer with a
+              passion for coding, problem-solving, and creating innovative
+              solutions. I specialize in Java Full Stack Development and am eager
+              to apply my knowledge to build scalable web applications.
+            </p>
+
+            <!-- Social + Buttons -->
+            <div class="buttons">
+              <div class="social-icons">
+
+                <div style="display: flex; gap: 15px;">
+                  <a href="https://wa.me/919876543210" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"
+                      width="25" height="25" style="filter: invert(1);">
+                  </a>
+
+                  <a href="https://github.com/Neelesh2003/" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                      alt="GitHub" width="25" height="25" style="filter: invert(1);">
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/neelesh-gupta-9b7677249" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"
+                      width="25" height="25" style="filter: invert(1);">
+                  </a>
+
+                  <a href="https://twitter.com/" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"
+                      width="25" height="25" style="filter: invert(1);">
+                  </a>
+
+                  <a href="mailto:yourmail@gmail.com" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email"
+                      width="25" height="25" style="filter: invert(1);">
+                  </a>
+                </div>
+
+              </div>
+
+              <div class="btn-group">
+                <a class="glow-on-hover button-style"
+                  href="https://drive.google.com/file/d/1-4WgaiW68JOkA8ImcrObS37TrZb4aYa8/view?usp=sharing"
+                  target="_blank">About Me</a>
+                <button class="glow-on-hover">Contact Me</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Photo -->
+          <div *ngIf="item === 'profile-photo'" class="profile-photo gradient-border" cdkDrag>
+            <img src="/assets/images/profile-pic .png" alt="profile picture" />
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

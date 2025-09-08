@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap");
+
+$primary: #6a11cb;
+$secondary: #2575fc;
+$text-light: #f5f5f5;
+
+.FirstElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24vh;
+  padding: 0 5% -3remx 6rem;
+  flex-wrap: wrap;
+}
+
+.home-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Profile Text */
+.profile-text {
+  flex: 1;
+  max-width: 600px;
+  color: #323232;
+
+  h1 {
+    padding: 8px;
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+
+    .highlight {
+      background: #00ABE4;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    .highlight2 {
+      background: #00ABE4;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    color:#323232;
+  }
+}
+
+/* Glass Card */
+.glass-card {
+  background: #fffdf2;
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+.glass-card:hover{
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 12px rgba(0, 171, 228,0.4)
+}
+
+/* Profile Photo with Gradient Border */
+
+
+.gradient-border {
+  padding: 6px;
+  border-radius: 50%;
+  // background: ;
+ box-shadow:0 8px 24px rgba(0, 0, 0, 0.7);
+  transition: transform 0.6s ease;
+
+  img {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+
+    img {
+      transform: scale(1.08);
+    }
+  }
+}
+
+/* Buttons */
+.btn-group {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.glow-on-hover {
+  padding: 0.6rem 1.6rem;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #00Abe4;
+  background: linear-gradient(145deg, #f8dfcf, #fff6c5); 
+  border: 2px solid #E9F1FA;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 
+    6px 6px 12px rgba(50, 50, 50, 0.6),   // dark bottom shadow
+    -4px -4px 10px rgba(233, 241, 250, 0.9); // light top highlight
+
+  &:hover {
+    background: linear-gradient(145deg, #DDD0C8, #E9F1FA);
+    border: 2px solid #DDD0C8;
+    box-shadow: 
+      8px 8px 20px rgba(50, 50, 50, 0.7), 
+      -6px -6px 16px rgba(233, 241, 250, 1);
+    transform: translateY(-4px) scale(1.05);
+  }
+
+  &:active {
+    transform: translateY(2px) scale(0.97);
+    box-shadow: inset 4px 4px 8px rgba(50, 50, 50, 0.5),
+                inset -4px -4px 8px rgba(233, 241, 250, 0.8);
+  }
+}
+
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 1rem;
+
+  a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #00ABE4;
+    transition: transform 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      background: #00ABE4;
+      transform: scale(1.15);
+    }
+  }
+}
+
+.button-style{
+background: #DDD0c8;
+}
+
+/* Typewriter */
+.cursor {
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 2.4rem;
+}
+
+.typewriter-animation {
+  animation: typewriter 3.5s steps(40) 1s 1 both,
+    blinkingCursor 600ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkingCursor {
+  from {
+    border-right-color: #fff;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .FirstElement {
+    flex-direction: column;
+    text-align: center;
+        gap: 10vh;
+  }
+
+  .profile-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .gradient-border img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-text {
+    max-width: 92%;
+  }
+
+  .profile-text h1 {
+    font-size: 2rem;
+  }
+
+  .cursor {
+    font-size: 1.6rem;
+  }
+}
+
+
+.intro-text{
+color : #323232;
+font-size: 1.5rem;
+}
+
+P{
+text-align: justify;
+}
