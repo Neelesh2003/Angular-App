@@ -1,0 +1,38 @@
+<div class="box-container">
+  <div class="body-part">
+  <div class="image-form">
+    <!-- Left Image Section -->
+    <div class="image-style">
+       <img src="/assets/images/Contact-form-boy.png" alt="Contact Image" />
+    </div>
+
+    <!-- Right Contact Form Section -->
+    <div class="contact-card">
+      <h2 class="title">Get in Touch</h2>
+      <p class="subtitle">We’d love to hear from you</p>
+
+      <form #contactForm="ngForm" class="contact-form-2" (ngSubmit)="sendEmail(contactForm)">
+        <div class="input-field">
+          <input type="text" name="from_name" ngModel placeholder="Your Name" class="key-input-field" required />
+        </div>
+
+        <div class="input-field">
+          <input type="email" name="from_email" ngModel placeholder="Your Email" class="key-input-field" required />
+        </div>
+
+        <div class="input-field">
+          <input type="text" name="subject" ngModel placeholder="Subject" class="key-input-field" />
+        </div>
+
+        <div class="input-field">
+          <textarea name="message" ngModel placeholder="Your Message" rows="5" class="key-input-field" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+
+        <div class="message" [style.color]="messageColor">{{ message }}</div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

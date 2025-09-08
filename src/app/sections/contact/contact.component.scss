@@ -1,0 +1,132 @@
+$primary: #ff6ec4;
+$secondary: #7873f5;
+$accent: #42e695;
+
+/* Image Styling */
+.image-style {
+  // flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-height: 600px;
+    width: auto;
+    height: auto;
+  }
+
+  @media (max-width: 900px) {
+    img {
+      max-width: 85%;
+      height: auto;
+    }
+  }
+}
+
+/* Contact Card */
+.contact-card {
+  flex: 1;
+  padding: 1.4rem;
+  text-align: center;
+  color: #00abe4;
+  background: #e9f1fa;
+  backdrop-filter: blur(12px);
+  border-radius: 6% 6% 6% 6%;
+  box-shadow: 
+   8px 8px 16px rgba(0, 0, 0, 0.25),   // bottom-right shadow
+  -8px 8px 16px rgba(0, 0, 0, 0.25),   // bottom-left shadow
+   8px -8px 16px rgba(0, 0, 0, 0.2),   // top-right shadow
+  -8px -8px 16px rgba(255, 255, 255, 0.7); // top-left highlight
+
+  width: 28rem;
+
+  @media (max-width: 900px) {
+    border-radius: 18px 18px 18px 18px;
+    width: 30rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, $primary, $secondary, $accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (max-width: 600px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .subtitle {
+    margin-bottom: 25px;
+    color: #323232;
+    font-size: 1rem;
+  }
+}
+
+/* Input + Textarea */
+.input-field {
+  width: 100%;
+  margin-bottom: 18px;
+
+  .key-input-field {
+    width: 100%;
+    padding: 0.8rem;
+    border-top:transparent ;
+    border-right:transparent ;
+    border-left:transparent ;
+    border-bottom: 2px solid #00abe4;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #323232;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+      color: #5b5b5b;
+    }
+
+    &:hover {
+      border-color: orange;
+    }
+
+    &:focus {
+      border: 2px solid yellow;
+      box-shadow: 0 0 10px $primary, 0 0 20px $secondary;
+    }
+  }
+
+  textarea.key-input-field {
+    resize: none;
+    min-height: 120px;
+  }
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, $primary, $secondary, $accent);
+  color: white;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px $primary, 0 0 20px $secondary, 0 0 30px $accent;
+  }
+}
+
+.image-form{
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+}
