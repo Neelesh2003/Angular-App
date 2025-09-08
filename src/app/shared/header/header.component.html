@@ -1,0 +1,92 @@
+<mat-toolbar class="header-toolbar rainbowmat-elevation-z6">
+  <!-- Logo -->
+  <div class="logo" (click)="scrollTo('home')">
+    <mat-icon class="bolt">bolt</mat-icon>
+    <span class="logo-text">Portfolio</span>
+  </div>
+
+  <!-- Desktop Navigation -->
+  <div class="navbar-container d-none d-md-flex">
+    <ul class="navbar-list">
+      <li
+        *ngFor="let item of rightList"
+        cdkDrag
+        [cdkDragBoundary]="'.navbar-container'"
+      >
+        <a (click)="scrollTo(item.link)" routerLinkActive="active">
+          <mat-icon>{{ item.icon }}</mat-icon>
+          <span>{{ item.label }}</span>
+        </a>
+      </li>
+    </ul>
+
+
+<div class="mt-2 ml-6">
+<label class="toggle-desk">
+  <input type="checkbox" id="theme-toggle" (change)="onToggle($event)">
+  <span class="slider-desk"></span>
+  <span class="icon moon">🌙</span>
+  <span class="icon sun">☀️</span>
+</label>
+</div>
+
+  </div>
+
+  <!-- Mobile Menu Toggle -->
+  <button
+    mat-icon-button
+    class="menu-toggle d-md-none"
+    (click)="isMenuOpen = !isMenuOpen"
+  >
+    <mat-icon>{{ isMenuOpen ? "close" : "menu" }}</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- Mobile Dropdown -->
+<div *ngIf="isMenuOpen" class="mobile-menu d-md-none">
+
+    <ul>
+    <li *ngFor="let item of rightList">
+      <a (click)="scrollTo(item.link); isMenuOpen = false">
+        <mat-icon>{{ item.icon }}</mat-icon> {{ item.label }}
+      </a>
+    </li>
+  </ul>
+  <div class="tg-btn">
+    <div class="toggle-item">
+<label class="toggle">
+  <input type="checkbox" id="theme-toggle" (change)="onToggle($event)">
+  <span class="slider"></span>
+  <span class="icon moon">🌙</span>
+  <span class="icon sun">☀️</span>
+</label>
+</div>
+
+<div>
+
+  <div class="color-selector">
+  <label class="box red">
+    <input type="radio" name="theme" value="red">
+    <span class="checkmark">✔</span>
+  </label>
+
+  <label class="box blue">
+    <input type="radio" name="theme" value="blue">
+    <span class="checkmark">✔</span>
+  </label>
+
+  <label class="box green">
+    <input type="radio" name="theme" value="green">
+    <span class="checkmark">✔</span>
+  </label>
+
+  <label class="box purple">
+    <input type="radio" name="theme" value="purple">
+    <span class="checkmark">✔</span>
+  </label>
+</div>
+
+</div>
+</div>
+</div>
+
