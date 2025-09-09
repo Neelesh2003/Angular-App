@@ -8,14 +8,18 @@ import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  isClicked:any=false;
 
-  rightList = [
-    { label: "Home", icon: "home", link: "home" },
-    { label: "About", icon: "info", link: "about" },
-    { label: "Education", icon: "school", link: "education" },
-    { label: "Projects", icon: "work", link: "projects" },
-    { label: "Contact", icon: "contacts", link: "contact" },
-  ];
+ rightList = [
+  { label: "Home", icon: "home", link: "home" },
+  { label: "About", icon: "info", link: "about" },
+  { label: "Education", icon: "school", link: "education" },
+   { label: "Skills", icon: "build", link: "skills" },
+  { label: "Projects", icon: "work", link: "projects" },
+  { label: "Achievements", icon: "emoji_events", link: "achievements" },
+  { label: "Contact", icon: "contacts", link: "contact" },
+];
+
 
   drop(event: CdkDragDrop<any[]>) {
     moveItemInArray(this.rightList, event.previousIndex, event.currentIndex);
@@ -35,9 +39,9 @@ scrollTo(sectionId: string) {
   }
 }
 
- onToggle(event: Event) {
-    const checked = (event.target as HTMLInputElement).checked;
-    if (checked) {
+ onToggle() {
+  this.isClicked = !this.isClicked;
+    if (!this.isClicked) {
       document.body.style.background = "#ffffff"; 
     } else {
       document.body.style.background = "#000000"; 

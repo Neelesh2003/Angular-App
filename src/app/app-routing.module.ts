@@ -6,6 +6,7 @@ import { EducationComponent } from './sections/education/education.component';
 import { HomeComponent } from './sections/home/home.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { SkillsComponent } from './sections/skills/skills.component';
+import { AchievementComponent } from './sections/achievements/achievements.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'skills', component: SkillsComponent },
   { path: 'education', component: EducationComponent },
   { path: 'projects', component: ProjectsComponent },
+   {path:'achievement',component:AchievementComponent},
   { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '/home' } 
 ];

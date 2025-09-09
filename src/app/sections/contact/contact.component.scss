@@ -3,16 +3,30 @@ $secondary: #7873f5;
 $accent: #42e695;
 
 /* Image Styling */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .image-style {
   // flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+     animation: float 4s ease-out infinite;
 
   img {
     max-height: 600px;
     width: auto;
     height: auto;
+ 
   }
 
   @media (max-width: 900px) {
@@ -49,7 +63,7 @@ $accent: #42e695;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 10px;
-    background: linear-gradient(90deg, $primary, $secondary, $accent);
+    background: #00abe4;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -61,7 +75,8 @@ $accent: #42e695;
   .subtitle {
     margin-bottom: 25px;
     color: #323232;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight:500;
   }
 }
 
@@ -89,12 +104,12 @@ $accent: #42e695;
     }
 
     &:hover {
-      border-color: orange;
+      border-color: #e9f1fa;
     }
 
     &:focus {
-      border: 2px solid yellow;
-      box-shadow: 0 0 10px $primary, 0 0 20px $secondary;
+      border: 2px solid #e9f1fa;;
+   box-shadow: 0 0 10px #d4e4f7, 0 0 10px #00abe4;
     }
   }
 
@@ -106,20 +121,20 @@ $accent: #42e695;
 
 /* Button */
 .submit-btn {
-  width: 100%;
+  width: 95%;
   padding: 12px;
   font-weight: bold;
   font-size: 1rem;
   border-radius: 12px;
-  background: linear-gradient(90deg, $primary, $secondary, $accent);
-  color: white;
+  background: linear-gradient(45deg,#00abe4);
+  color: #323232;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px $primary, 0 0 20px $secondary, 0 0 30px $accent;
+    transform: scale(1.07);
+    box-shadow: 0 0 10px #b6c0cc, 0 0 10px #00abe4;
   }
 }
 
