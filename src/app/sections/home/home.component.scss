@@ -251,3 +251,137 @@ font-size: 1.5rem;
 P{
 text-align: justify;
 }
+
+/* Extra Responsiveness */
+
+/* Large Desktops (2k screens & ultra wide) */
+@media (min-width: 1600px) {
+  .FirstElement {
+    gap: 12vw; /* proportional spacing instead of fixed vh */
+  }
+
+  .profile-text h1 {
+    font-size: 4rem;
+  }
+
+  .profile-text h4 {
+    font-size: 1.6rem;
+  }
+
+  .gradient-border img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Tablets Landscape & Small Desktops */
+@media (max-width: 1200px) {
+  .FirstElement {
+    gap: 8vh;
+    padding: 2rem;
+  }
+
+  .profile-text {
+    max-width: 500px;
+  }
+
+  .profile-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .gradient-border img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Tablets Portrait */
+@media (max-width: 900px) {
+  .FirstElement {
+    flex-direction: column;
+    gap: 6vh;
+    padding: 2rem 1rem;
+  }
+
+  .profile-text {
+    max-width: 95%;
+  }
+
+  .profile-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .profile-text h4 {
+    font-size: 1.2rem;
+  }
+
+  .gradient-border img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .btn-group {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Small Mobiles (<= 600px) */
+@media (max-width: 600px) {
+  .profile-text h1 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  .profile-text h4 {
+    font-size: 1rem;
+  }
+
+  .profile-text p {
+    font-size: 0.9rem;
+  }
+
+  .gradient-border img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .glow-on-hover {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Very Small Mobiles (<= 360px) */
+@media (max-width: 360px) {
+  .profile-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile-text h4 {
+    font-size: 0.9rem;
+  }
+
+  .profile-text p {
+    font-size: 0.8rem;
+  }
+
+  .gradient-border img {
+    width: 110px;
+    height: 110px;
+  }
+}

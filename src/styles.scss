@@ -3,10 +3,8 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Body reset + typography */
 body {
   margin: 0;
-  // height: 100%;
   font-family: 'Lexend', 'Roboto', "Helvetica Neue", sans-serif;
   display: flex;
   flex-direction: column;
@@ -24,54 +22,69 @@ body {
   border-radius: 20px;
 }
 
-// .box-container{
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin:90px 2rem 2rem 2rem;
-//   box-sizing: border-box;
-//   border: 1px solid rgb(22, 20, 20);
-//   border-radius: 10%;
-//   box-shadow: 0px  -2px 32px rgba(106, 17, 203, 1);
-//   @media (max-width: 768px) {
-//     padding: 1.5rem;
-//   }
-
-//   @media (max-width: 480px) {
-//     padding: 1.5rem;
-//   }
-// }
-
+/* Box container */
 .box-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 90px 2rem 2rem 2rem;
+  margin: 85px 2rem 2rem;
   box-sizing: border-box;
   border-radius: 20px;
-  // background: linear-gradient(145deg, #ffffff, #e6e6e6); // subtle 3D gradient
- box-shadow: 
-   8px 8px 16px rgba(0, 0, 0, 0.25),   // bottom-right shadow
-  -8px 8px 16px rgba(0, 0, 0, 0.25),   // bottom-left shadow
-   8px -8px 16px rgba(0, 0, 0, 0.2),   // top-right shadow
-  -8px -8px 16px rgba(255, 255, 255, 0.7); // top-left highlight
-
-
-  transition: all 0.3s ease; // smooth hover animation
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.25),
+   -8px 8px 16px rgba(0, 0, 0, 0.25),
+    8px -8px 16px rgba(0, 0, 0, 0.2),
+   -8px -8px 16px rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
 
   &:hover {
     box-shadow: 
-      14px 14px 36px rgba(0, 0, 0, 0.25), 
-      -14px -14px 36px rgba(255, 255, 255, 0.9);
+      14px 14px 36px rgba(0, 0, 0, 0.25),
+     -14px -14px 36px rgba(255, 255, 255, 0.9);
   }
+}
 
-  @media (max-width: 768px) {
-    padding: 1.2rem;
-    margin: 50px 1rem 1rem 1rem;
-  }
+/* ===============================
+   RESPONSIVENESS
+   =============================== */
 
-  @media (max-width: 480px) {
-    padding: 1rem;
-    margin: 30px 0.5rem;
+/* Large screens >1600px */
+@media (min-width: 1600px) {
+  .body-part {
+    min-height: 90vh;
   }
+}
+
+/* Tablets / small laptops */
+@media (max-width: 992px) {
+  body { font-size: 15px; }
+  .box-container { padding: 1rem 1.2rem; }
+}
+
+/* Medium mobiles */
+@media (max-width: 600px) {
+  body { font-size: 14px; }
+  .box-container {
+    margin-top: 75px;
+    padding: 0.8rem;
+    border-radius: 16px;
+  }
+  .body-part {
+    min-height: 80vh;
+    border-radius: 12px;
+  }
+}
+
+/* Small devices ≤400px */
+@media (max-width: 400px) {
+  body { font-size: 13px; }
+  .box-container { padding: 0.6rem; border-radius: 12px; }
+  .body-part { min-height: 75vh; border-radius: 8px; }
+}
+
+/* Ultra small ≤360px */
+@media (max-width: 360px) {
+  body { font-size: 12px; }
+  .box-container { padding: 0.5rem; border-radius: 10px; }
+  .body-part { min-height: 70vh; border-radius: 6px; }
 }
