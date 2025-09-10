@@ -15,7 +15,7 @@ interface Project {
 })
 export class SkillsComponent implements OnInit, OnDestroy {
 
-  skills: string[] = ['C#', '.Net', 'Angular','Postgres',
+  skills: string[] = ['C#', '.Net', 'Angular', 'Postgress', 'Git Extension', 'Angular Material', 'CLI', 'JDBC',
     'Java', 'Spring Boot', 'VS Code', 'Eclipse', 'IntelliJ IDEA',
     'Git', 'GitHub', 'MySQL', 'MongoDB', 'C++',
     'Data Structures', 'OOPs', 'HTML', 'CSS', 'JavaScript', 'Boostrap'
@@ -37,11 +37,11 @@ export class SkillsComponent implements OnInit, OnDestroy {
   }
 
   prevSlide() {
-    this.currentIndex = (this.currentIndex - 1 + this. skills.length) % this.skills.length;
+    this.currentIndex = (this.currentIndex - 1 + this.skills.length) % this.skills.length;
   }
 
   nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this. skills.length;
+    this.currentIndex = (this.currentIndex + 1) % this.skills.length;
   }
 
   goToSlide(index: number) {
