@@ -17,6 +17,12 @@
 }
 
 .footer small {
-  display: block;
+  // display: block;
   margin: 4px 0;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    width: 55vh;
+  }
 }
