@@ -251,10 +251,10 @@ $text-color: #f5f5f5;
 }
 
 @media (max-width: 576px) {
-  .header-toolbar { height: 60px; }
+  .header-toolbar { height: 65px; }
  .logo .logo-text { font-size: 18px; font-weight: 600;}
   .logo .bolt { font-size: 22px; }
-  .mobile-menu { width: 100%; margin: 70px 0 0; }
+ .mobile-menu { margin-top: 68px; padding: 1.2rem;width: 95%;margin-left: 1rem; }
   .color-selector .box { width: 20px; height: 20px; }
   .toggle, .toggle-desk { width: 55px; height: 28px; }
   .toggle .slider, .toggle-desk .slider-desk { width: 20px; height: 20px; }
@@ -272,9 +272,9 @@ $text-color: #f5f5f5;
 @media (max-width: 360px) {
   .header-toolbar { height: 55px; border-radius: 12px; }
   .logo .bolt { font-size: 20px; }
-  .mobile-menu { margin-top: 45px; padding: 0.6rem; }
+  .mobile-menu { margin-top: 65px; padding: 0.6rem; }
   .mobile-menu ul li a { font-size: 14px; }
-  .toggle, .toggle-desk { width: 50px; height: 26px; }
+  .toggle, .toggle-desk { width: 62px; height: 28px; }
   .toggle .slider, .toggle-desk .slider-desk { width: 18px; height: 18px; }
   .toggle .icon { font-size: 12px; }
   .toggle-desk .sun, .toggle-desk .moon { font-size: 14px; }

@@ -1,12 +1,11 @@
 <div class="box-container">
   <div class="body-part">
-    <div class="FirstElement" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="items"
-      (cdkDropListDropped)="drop($event)">
+    <div class="FirstElement">
       <ng-container *ngFor="let item of items">
         <div class="home-item">
           <!-- Profile Text -->
 
-          <div *ngIf="item === 'profile-text'" class="profile-text glass-card" cdkDrag>
+          <div *ngIf="item === 'profile-text'" class="profile-text glass-card">
 
             <h1 class="cursor typewriter-animation">
               <span class="intro-text">Hi, It's Me</span>
@@ -68,7 +67,7 @@
           </div>
 
           <!-- Profile Photo -->
-          <div *ngIf="item === 'profile-photo'" class="profile-photo gradient-border" cdkDrag>
+          <div *ngIf="item === 'profile-photo'" class="profile-photo gradient-border">
             <img src="/assets/images/profile-pic .png" alt="profile picture" />
           </div>
         </div>
