@@ -36,7 +36,7 @@ export class ProjectsComponent implements OnInit {
       title: 'Real-Time Chat Application',
       description: `A real-time chat app built with <b>Java Socket Programming</b>, <b>Spring Boot</b>, 
         and <b>MySQL</b>. Supports multi-user interactive chat rooms.`,
-      technologies: ['firebase',"Java","Networking", 'MySQL', 'Socket Programming'],
+      technologies: ['firebase',"Java","Networking", 'Socket Programming'],
       github: 'https://github.com/Neelesh2003/Chat-Application'
     },
      {

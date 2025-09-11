@@ -109,7 +109,6 @@
   0% { text-shadow: 0 0 10px cyan; }
   100% { text-shadow: 0 0 30px cyan, 0 0 60px cyan; }
 }
-
 /* Responsive */
 @media (max-width: 992px) {
   .project-card.prev { transform: scale(0.9) translateX(-240px); }
@@ -127,12 +126,65 @@
   .project-card.next { transform: scale(0.85) translateX(180px); }
 }
 
-@media (max-width: 480px) {
-  .slider { height: 280px; }
-  .project-card {
-    width: 90%;
-    min-height: 180px;
+/* ✅ Add this for phones <600px */
+@media (max-width: 600px) {
+  .slider {
+    height: 360px; /* taller so card breathes */
   }
-  .project-card.prev,
-  .project-card.next { display: none; } /* only show active */
+
+  .project-card {
+    width: 70%;
+    min-height: 260px;
+    padding: 1rem;
+  }
+
+  .project-card.active {
+    transform: scale(1.05) translateX(0);
+  }
+
+  .project-card.prev {
+    transform: scale(0.9) translateX(-160px);
+    opacity: 0.7;
+  }
+
+  .project-card.next {
+    transform: scale(0.9) translateX(160px);
+    opacity: 0.7;
+  }
+}
+
+/* ✅ Ultra-small phones (<400px) */
+@media (max-width: 400px) {
+  .slider { height: 300px; }
+  .project-card {
+    width: 60%;
+    min-height: 220px;
+    padding: 0.8rem;
+  }
+  .project-card.active { transform: scale(1.05) translateX(0); }
+  .project-card.prev { transform: scale(0.85) translateX(-140px); }
+  .project-card.next { transform: scale(0.85) translateX(140px); }
+}
+
+
+/* 📱 For <600px */
+@media (max-width: 600px) {
+  .dots {
+    gap: 0.7rem; /* a bit more spacing for finger taps */
+  }
+  .dots span {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+/* 📱 For <400px (very small phones) */
+@media (max-width: 400px) {
+  .dots {
+    gap: 0.9; /* more spacing */
+  }
+  .dots span {
+    height: 8px;
+    width: 8px;
+  }
 }
