@@ -41,7 +41,7 @@ $accent: #42e695;
 
 /* Contact Card */
 .contact-card {
-  flex: 1;
+  // flex: 1;
   padding: 1.4rem;
   text-align: center;
   color: #00abe4;
@@ -58,7 +58,7 @@ $accent: #42e695;
 
   @media (max-width: 900px) {
     border-radius: 18px 18px 18px 18px;
-    width: 34rem;
+    width: 30rem;
   }
 
   .title {
