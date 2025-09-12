@@ -263,7 +263,7 @@ $text-color: #f5f5f5;
 @media (max-width: 400px) {
   .header-toolbar { border-radius: 15px; }
  .logo .logo-text { font-size: 18px; font-weight: 600;}
-  .mobile-menu { margin-top: 68px; padding: 1.2rem;width: 95%;margin-left: 1rem; }
+  .mobile-menu { margin-top: 72px; padding: 1.2rem;width: 95%;margin-left: 0.85rem; }
   .color-selector { flex-direction: row; gap: 10px; }
   .toggle, .toggle-desk { width: 65px; height: 30px; }
   .toggle .slider, .toggle-desk .slider-desk { width: 20px; height: 20px; }
