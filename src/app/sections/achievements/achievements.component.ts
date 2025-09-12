@@ -1,11 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-interface Project {
+interface Achievement{
   icon: string;
   title: string;
   description: string;
-  technologies: string[];
-  github: string;
+  link:string;
 }
 
 @Component({
@@ -14,55 +13,88 @@ interface Project {
   styleUrls: ['./achievements.component.scss']
 })
 export class AchievementComponent implements OnInit, OnDestroy {
-  projects: Project[] = [
-    {
-      icon: 'fa fa-cricket',
-      title: 'Real-Time Cricket Score Checker',
-      description: `The <b>Real-Time Cricket Score Checker app</b> lets users view live cricket scores 
-        and updates in real-time. Built with <b>Spring Boot</b> (backend) and <b>Angular</b> (frontend).`,
-      technologies: ['Spring Boot', 'Angular', 'Web-Scraping'],
-      github: 'https://github.com/Neelesh2003/ReakTimeCrickScorer'
-    },
-    {
-      icon: 'fa fa-car',
-      title: 'Smart Attendance System by Face Recognition',
-      description: `<b>Smart Attendance System</b> employs face recognition technology to automate attendance. 
-        Uses Python libraries and provides real-time accuracy.`,
-      technologies: ['Python', 'OpenCV', 'Face Recognition', 'Tkinter'],
-      github: 'https://github.com/Neelesh2003/Real_Time_Attendance_by_Face-Recognition'
-    },
-    {
-      icon: 'fa fa-comments',
-      title: 'Real-Time Chat Application',
-      description: `A real-time chat app built with <b>Java Socket Programming</b>, <b>Spring Boot</b>, 
-        and <b>MySQL</b>. Supports multi-user interactive chat rooms.`,
-      technologies: ['Spring Boot', 'MySQL', 'Socket Programming'],
-      github: 'https://github.com/Neelesh2003/Chat-Application'
-    },
-    {
-      icon: 'fa fa-shield-alt',
-      title: 'Travel_Safe Web App',
-      description: `<b>Travel_Safe</b> is a safety app for solo travelers. Features Safety Map, 
-        Crime Data, SOS alerts, chatbot, and push notifications.`,
-      technologies: ['JavaScript', 'HTML', 'CSS', 'Node.js', 'MongoDB'],
-      github: 'https://github.com/Neelesh2003/Safety_Traveling-Wep_App'
-    },
-    {
-      icon: 'fa fa-user',
-      title: 'Personal Portfolio',
-      description: `A personal portfolio built with <b>Angular</b>. Showcases skills, projects, 
-        and contact details with a modern UI.`,
-      technologies: ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS'],
-      github: 'https://github.com/Neelesh2003/MyPorfolioWebApp'
-    },
-    {
-      icon: 'fa fa-cloud',
-      title: 'Simple Weather Web App',
-      description: `Fetches live weather updates using <b>OpenWeather API</b>. Built with HTML, CSS, and JavaScript.`,
-      technologies: ['HTML', 'CSS', 'JavaScript', 'OpenWeather API'],
-      github: 'https://github.com/Neelesh2003/Simple-Weather-Tracker'
-    }
-  ];
+
+achievements: Achievement[] = [
+  {
+    icon: 'fa fa-certificate',
+    title: 'Wipro TalentNext – Java Full Stack (2024)',
+    description: `Successfully completed the <b>Digital Skills Readiness Program</b> under Wipro TalentNext, 
+       gaining hands-on expertise in <b>Java Full Stack Development</b> including Spring Boot, REST APIs, 
+       and Angular integration.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  },
+  {
+    icon: 'fa fa-database',
+    title: 'Database Management System – NPTEL, IIT Kharagpur (2024)',
+    description: `Earned <b>Elite Certification</b> in <b>Database Management Systems</b> through NPTEL, 
+       covering relational models, SQL, transactions, and database design principles.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  },
+  {
+    icon: 'fa fa-code',
+    title: 'Data Structures & Algorithms Using Java – NPTEL, IIT Kharagpur (2023)',
+    description: `Achieved <b>Elite Certification</b> in <b>DSA with Java</b> via NPTEL. 
+       Strengthened problem-solving skills through algorithms, dynamic programming, and advanced data structures.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  },
+  {
+    icon: 'fa fa-shield-alt',
+    title: 'Cisco Cybersecurity Virtual Internship (2024)',
+    description: `Completed <b>Cybersecurity Virtual Internship</b> at Cisco Networking Academy, 
+       with practical exposure to <b>network defense, cryptography, ethical hacking</b>, and cyber risk assessment.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  },
+  {
+    icon: 'fa fa-users',
+    title: 'GSSoC 2024 Contributor',
+    description: `Contributed to <b>GirlScript Summer of Code 2024</b>, actively working on 
+       <b>open-source projects</b> involving full-stack development and issue resolution.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  },
+  {
+    icon: 'fa fa-trophy',
+    title: 'Hackatron - Top 10 at IIITM Gwalior',
+    description: `Secured <b>Top 10 position</b> in Hackatron, organized under Infotsav'24 at IIITM Gwalior, 
+       with team <b>Code_Busters</b>, delivering innovative solutions to real-world challenges.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  },
+  {
+    icon: 'fa fa-code',
+    title: 'Core Team Member - GDG on Campus SRIT',
+    description: `Serving as a <b>core team member</b> of the <b>Google Developer Group (GDG) SRIT</b>, 
+       contributing to technical sessions, workshops, and community growth initiatives.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  },
+  {
+    icon: 'fa fa-certificate',
+    title: 'CodeChef Certification – Learn C (2023)',
+    description: `Completed <b>Learn C Certification</b> by CodeChef, 
+       mastering C programming fundamentals including loops, arrays, and pointers.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  },
+  // Certificates from uploads
+  {
+    icon: 'fa fa-certificate',
+    title: 'Hackathon Participation – ABV IIITM Gwalior (2024)',
+    description: `Successfully participated in <b>Hackatron at Infotsav'24</b>, hosted by ABV IIITM Gwalior. 
+       Gained invaluable experience in teamwork, collaboration, and real-world problem solving as part of <b>Team Code_Busters</b>.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  },
+  {
+    icon: 'fa fa-file-alt',
+    title: 'Research Paper Publication – IJSDR (2024)',
+    description: `Published a research paper titled <b>“Sentiment Analysis of Twitter Data Using Machine Learning Techniques”</b> 
+       in the <b>International Journal of Scientific Development and Research (IJSDR)</b>, Volume 9, Issue 5, May 2024.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  },
+  {
+    icon: 'fa fa-graduation-cap',
+    title: 'Python Programming – Spoken Tutorial, IIT Bombay (2024)',
+    description: `Certified in <b>Python Programming</b> by IIT Bombay through the <b>Spoken Tutorial Project</b>, 
+       gaining practical knowledge in Python fundamentals, data handling, and scripting.`,
+    link: 'https://www.linkedin.com/in/neelesh-gupta18/'
+  }
+];
 
   currentIndex = 0;
   private autoSlideInterval: any;
@@ -70,7 +102,7 @@ export class AchievementComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.autoSlideInterval = setInterval(() => {
       this.nextSlide();
-    }, 1000);
+    }, 2000);
   }
 
   ngOnDestroy() {
@@ -79,12 +111,8 @@ export class AchievementComponent implements OnInit, OnDestroy {
     }
   }
 
-  prevSlide() {
-    this.currentIndex = (this.currentIndex - 1 + this.projects.length) % this.projects.length;
-  }
-
   nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.projects.length;
+    this.currentIndex = (this.currentIndex + 1) % this.achievements.length;
   }
 
   goToSlide(index: number) {

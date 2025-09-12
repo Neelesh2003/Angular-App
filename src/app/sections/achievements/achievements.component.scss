@@ -23,24 +23,24 @@
   min-height: 450px;  // taller cards
   padding: 30px;
   border-radius: 20px;
-  background: linear-gradient(#E9F1FA,#88e1ff);
+  background: linear-gradient(#fffdf2,#fff6c5,#DDD0c8);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.5s ease;
   opacity: 0;
-  box-shadow: 0 0 16px rgb(135, 225, 255);
+  box-shadow: 0 0 16px rgba(0, 171, 228, 1);
 
   .project-icon i {
-    font-size: 3rem;
-    color:rgba(144, 227, 255);
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    color:#00ABE4;
+    margin-bottom: 18px;
     animation: glowIcon 2s ease-in-out infinite alternate;
   }
 
   h4 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #00ABE4;
     font-weight: 600;
     margin-bottom: 10px;
@@ -48,7 +48,7 @@
 
   p {
     font-size: 1rem;
-    color: #fffdf2;
+    color: #323232;
     line-height: 1.6;
     margin-bottom: 15px;
   }
@@ -86,7 +86,7 @@
 
   .github-btn {
     margin-top: 1rem;
-    background: linear-gradient(135deg, #e5f1ff);
+    background: linear-gradient(135deg, #f6f2dc);
     padding: 10px 20px;
     border-radius: 8px;
     border: none;
@@ -94,14 +94,14 @@
     transition: 0.3s;
 
     a {
-      color: #323232;
+      color: #00ABE4;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
     }
 
     &:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px #42e695, 0 0 30px #7873f5;
+      box-shadow: 0 6px 18px rgba(27, 27, 28, 0.8);
     }
   }
 
@@ -175,7 +175,7 @@
 /* Glow animation */
 @keyframes glowIcon {
   0% { text-shadow: 0 0 10px cyan; }
-  100% { text-shadow: linear-gradient(135deg, #e9f1fa, #00f0ff);; }
+  100% { text-shadow: linear-gradient(135deg, #e9f1fa, #00ffee);; }
 }
 
 

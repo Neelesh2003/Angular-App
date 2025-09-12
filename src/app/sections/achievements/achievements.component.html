@@ -3,13 +3,13 @@
   <div class="slider-container">
     <div class="slider">
       <div
-        *ngFor="let project of projects; let i = index"
+        *ngFor="let project of achievements; let i = index"
         class="project-card"
         [ngClass]="{
           active: i === currentIndex,
-          prev: i === (currentIndex - 1 + projects.length) % projects.length,
-          next: i === (currentIndex + 1) % projects.length,
-          hidden: i !== currentIndex && i !== (currentIndex - 1 + projects.length) % projects.length && i !== (currentIndex + 1) % projects.length
+          prev: i === (currentIndex - 1 + achievements.length) % achievements.length,
+          next: i === (currentIndex + 1) % achievements.length,
+          hidden: i !== currentIndex && i !== (currentIndex - 1 + achievements.length) % achievements.length && i !== (currentIndex + 1) % achievements.length
         }"
       >
         <div class="project-icon">
@@ -17,12 +17,8 @@
         </div>
         <h4>{{ project.title }}</h4>
         <p [innerHTML]="project.description"></p>
-        <h5>Technologies Used:</h5>
-        <div class="tech-badges">
-          <span class="tech" *ngFor="let tech of project.technologies">{{ tech }}</span>
-        </div>
         <button class="github-btn">
-          <a href="{{ project.github }}" target="_blank">Github Link</a>
+          <a href="{{ project.link }}" target="_blank">Check It Now</a>
         </button>
       </div>
     </div>
@@ -30,7 +26,7 @@
     <!-- Dots -->
     <div class="dots">
       <span
-        *ngFor="let project of projects; let i = index"
+        *ngFor="let project of achievements; let i = index"
         [class.active]="i === currentIndex"
         (click)="goToSlide(i)"
       ></span>
