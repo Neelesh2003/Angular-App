@@ -78,13 +78,13 @@ $text-light: #f5f5f5;
 .gradient-border {
   padding: 6px;
   border-radius: 50%;
-  box-shadow:0 8px 24px rgba(0, 0, 0, 0.7);
+  box-shadow:0 12px 14px rgba(0, 0, 0, 0.7);
   transition: transform 0.6s ease;
 
   img {
     border-radius: 50%;
-    width: 230px;
-    height: 230px;
+    width: 235px;
+    height: 235px;
     object-fit: cover;
     transition: transform 0.4s ease;
   }
@@ -268,8 +268,8 @@ text-align: justify;
   }
 
   .gradient-border img {
-    width: 220px;
-    height: 220px;
+    width: 235px;
+    height: 235px;
   }
 
   .btn-group {
