@@ -61,22 +61,22 @@ export class ProjectsComponent implements OnInit {
       description: `A personal portfolio built with <b>Angular</b>. Showcases skills, projects, 
         and contact details with a modern UI.`,
       technologies: ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS'],
-      github: 'https://github.com/Neelesh2003/MyPorfolioWebApp'
+      github: 'https://portfolio-flax-nine-64.vercel.app/'
     },
     {
       icon: 'fa fa-cloud',
       title: 'Simple Weather Web App',
       description: `Fetches live weather updates using <b>OpenWeather API</b>. Built with HTML, CSS, and JavaScript.`,
       technologies: ['HTML', 'CSS', 'JavaScript', 'OpenWeather API'],
-      github: 'https://github.com/Neelesh2003/Simple-Weather-Tracker'
+      github: 'https://weather-app-angular-nine-peach.vercel.app/'
     },
       {
     icon: 'fa fa-graduation-cap',
-    title: 'Student Management System',
-    description: `A comprehensive <b>Student Management System</b> built with <b>Angular</b> (frontend), 
-      <b>.NET</b> (backend), and <b>MySQL</b>. Allows managing student records, attendance, grades, and reports.`,
+    title: 'Employee Management System',
+    description: `A comprehensive <b>Employee Management System</b> built with <b>Angular</b> (frontend), 
+      <b>.NET</b> (backend), and <b>MySQL</b>. Allows managing employee records, perfomance, salary, and department.`,
     technologies: ['Angular', '.NET', 'MySQL', 'REST API'],
-    github: 'https://github.com/Neelesh2003/Student-Management-System'
+    github: 'https://employee-management-system-tz7y.vercel.app/register'
   }
   ];
 
